@@ -44,6 +44,8 @@ import frc.robot.subsystems.vision.Vision;
 import frc.robot.subsystems.vision.VisionConstants;
 import frc.robot.subsystems.vision.VisionIOLimelight;
 import frc.robot.subsystems.vision.VisionIOPhotonVisionSim;
+import frc.robot.util.RobotConfigLoader;
+
 import org.littletonrobotics.junction.Logger;
 import org.littletonrobotics.junction.networktables.LoggedDashboardChooser;
 
@@ -498,7 +500,7 @@ public class RobotContainer {
     value = deadband(value, 0.025);
 
     // Square the axis
-    value = Math.copySign(value * value, value);
+    value = Math.copySign(RobotConfigLoader.getDouble("container.joystick_scale_factor")*Math.pow(value,2), value);
 
     if (drive.getSlowDrive()) {
       return 0.5 * value;
