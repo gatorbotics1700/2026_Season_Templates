@@ -11,6 +11,7 @@ public final class RobotConfigLoader {
   private static final String SHENANDOAH_SERIAL = "03223852";
   private static final String HUANG_HE_SERIAL = "032D20FA";
   private static final String MISSISSIPPI_SERIAL = "032D2198";
+  private static final String EXPERIMENTAL_SERIAL = "032BE421";
   private static final String DEFAULT_SIM_SERIAL = "SIMULATION";
 
   private static final String DEFAULT_CONFIG_FILE = "config_sting.properties";
